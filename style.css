@@ -1,14 +1,14 @@
-#topNav {
+.topNav {
   background: blue;
   box-shadow: 0px 1px 10px 10px black;
   height: auto;
   text-align: center;
   width: 100%;
 }
-#topNav > ul > li {
+.topNav > ul > li {
   display: inline;
 }
-#topNav > ul > li > a
+.topNav > ul > li > a
 {
   color: lightblue;
   display: inline-block;
@@ -19,6 +19,6 @@
   text-decoration: none;
   transition: color 0.3s ease-in;
 }
-#topNav > ul > li > a:hover {
+.topNav > ul > li > a:hover {
   color: black;
 }
