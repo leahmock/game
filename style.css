@@ -43,3 +43,7 @@ body {
 h1 {
   color: rgb(0, 79, 184) /* darker blue color */;
 }
+/* aboutMeContent styling for About Me page */
+#aboutMeContent {
+ margin: 35px ; 
+}
