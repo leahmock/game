@@ -1,7 +1,7 @@
 /* background styling */
 body {
   background-color: blue;
-{
+}
 /* topNav background */
 .topNav {
   background: blue;
@@ -32,11 +32,14 @@ body {
 }
 /* activeTab styling */
 .activeTab {
-  color: lightblue ; 
-  display: inline-block ;
+  color: lightblue; 
+  display: inline-block;
   height: 60px ;
   line-height: 60px;
-  margin: 0px ; 
+  margin: 0px; 
   padding: 0px 15px;
   text-decoration: none;
+}
+h1 {
+  color: lightblue;
 }
