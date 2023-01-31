@@ -49,21 +49,23 @@ body {
 }
 
 /* Table styling for Mission page */
-#h4Table {
-  text-align: center;
-}
-table {
-  text-align: center;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-}
-th, td {
-  padding: 8px;
-}
-td {
-  border: 1px solid;
-}
-.choice {
-  font-style: italic;
-}
+  /* Table title */
+  #h4Table {
+    text-align: center;
+  }
+  /* Table formats */
+  table {
+    text-align: center;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th, td {
+    padding: 8px;
+  }
+  td {
+    border: 1px solid;
+  }
+  .choice {
+    font-style: italic;
+  }
