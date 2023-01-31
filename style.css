@@ -45,6 +45,7 @@ body {
 /* aboutMeContent styling for About Me page */
 #aboutMeContent {
  margin: 35px ; 
+ max-with: 900ox ;
 }
 
 /* Table styling for Mission page */
