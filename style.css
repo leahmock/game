@@ -48,6 +48,11 @@ body {
  max-with: 900ox ;
 }
 
+/* ourMissionContent styling for Our Mission page */
+#ourMissionContent {
+  margin: 35px ;
+}
+
 /* Table styling for Mission page */
   /* Table title */
   #h4Table {
