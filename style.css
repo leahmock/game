@@ -32,7 +32,7 @@ body {
 }
 /* activeTab styling */
 .activeTab {
-  color: rgb(64, 134, 255) /* lighter blue color */; 
+  color: rgb(0, 106, 245) /* medium blue color */; 
   display: inline-block;
   height: 60px ;
   line-height: 60px;
