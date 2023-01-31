@@ -1,3 +1,4 @@
+/* topNav background */
 .topNav {
   background: blue;
   box-shadow: 0px 1px 10px 10px lightblue;
@@ -5,9 +6,11 @@
   text-align: center;
   width: 100%;
 }
+/* topNav list items */
 .topNav > ul > li {
   display: inline;
 }
+/* topNav anchor links */
 .topNav > ul > li > a
 {
   color: white;
@@ -19,10 +22,11 @@
   text-decoration: none;
   transition: color 0.3s ease-in;
 }
+/* topNav anchor links hover */
 .topNav > ul > li > a:hover {
   color: blue;
 }
-
+/* activeTab styling */
 .activeTab {
   color: lightblue ; 
   display: inline-block ;
