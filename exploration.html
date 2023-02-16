@@ -31,20 +31,112 @@
       
         <div id="explorationContent">
         <!--Code for Exploration section-->
-          <h1>Page Navigation</h1>
-            <li><a href=#physicalboardgame>Physical Board Game</a></li>
-            <li><a href=#physicalboardgameimages>Physical Board Game Images</a></li>
-            <li><a href=#pythongameclick>Python Game: Click Game</a></li>
-            <li><a href=#clickgamecode>Click Game Code</a></li>
-            <li><a href=#pythongamecoin>Python Game: Coin Game</a></li>
-            <li><a href=#coingamecode>Coin Game Code</a></li>
           <h1>Exploration</h1>
+            <h3>Page Navigation</h3>
+                <li><a href=#physicalboardgame>Physical Board Game</a></li>
+                <li><a href=#physicalboardgameimages>Physical Board Game Images</a></li>
+                <li><a href=#pythongameclick>Python Game: Click Game</a></li>
+                <li><a href=#clickgamecode>Click Game Code</a></li>
+                <li><a href=#pythongamecoin>Python Game: Coin Game</a></li>
+                <li><a href=#coingamecode>Coin Game Code</a></li>
             <h3 id="physicalboardgame">Physical Board Game</h3>
                 <p>For our board game, we chose to create an animal-themed board game. We selected four pieces (an eagle, a bear, a rabbit, and a cat) for the player to select, and created different themed tiles that would either help or harm the player. We then developed the rules of the game, and we modified them as we played a test round. From this assignment, we learned that our instructions were too complicated, which made it difficult for people to immediately understand them and be able to play the game. We also learned that there was slightly too much downtime between plays, especially for players who did not roll a certain number, as our rules were based on what number was rolled.</p>
             <h3 id="physicalboardgameimages">Physical Board Game Images</h3>
                 <img src="PhysicalBoardGamePhoto" alt="Image of the physical board game.">
             <h3 id="pythongameclick">Python Game: Click Game</h3>
             <h3 id="clickgamecode">Click Game Code</h3>
+                <pre>
+                    from random import randint
+
+                    WIDTH = 750
+                    HEIGHT = 750
+                    score = 0
+                    game_over = False
+                    canary_counter = 0
+
+                    canary = Actor("canary")
+                    canary.pos = 100, 100
+
+                    worm = Actor("worm")
+                    worm.pos = 200, 200
+
+                    evilcanary = Actor("evilcanary")
+                    evilcanary.pos = 300, 300
+
+                    def draw():
+                        screen.fill((111, 174, 255))
+                        canary.draw()
+                        worm.draw()
+                        evilcanary.draw()
+                        screen.draw.text("Score: " + str(score), color="white", topleft=(10, 10))
+
+                    if game_over:
+                        screen.fill("black")
+                        screen.draw.text(
+                            "Final Score: " + str(score), color="white", topleft=(200, 200), fontsize=60)
+
+                    def place_worm():
+                        worm.x = randint(20, (WIDTH - 20))
+                        worm.y = randint(20, (HEIGHT - 20))
+
+                    def place_evilcanary():
+                        evilcanary.x = randint(40, (WIDTH - 40))
+                        evilcanary.y = randint(40, (HEIGHT - 40))
+
+                    def time_up():
+                        global game_over
+                        game_over = True
+
+                    def update():
+                        global canary_counter
+                        global score
+
+                        if keyboard.left:
+                            canary.x = canary.x - 2
+                            canary_counter = canary_counter + 5
+                        elif keyboard.right:
+                            canary.x = canary.x + 2
+                            canary_counter = canary_counter + 5
+                        elif keyboard.up:
+                            canary.y = canary.y - 2
+                            canary_counter = canary_counter + 5
+                        elif keyboard.down:
+                            canary.y = canary.y + 2
+                            canary_counter = canary_counter + 5
+
+                        worm_collected = canary.colliderect(worm)
+                            if worm_collected:
+                            score = score + 10
+                            set_canary_happy()
+                            sounds.ping.play()
+                            place_worm()
+
+                        canary_collide = canary.colliderect(evilcanary)
+                        if canary_collide:
+                            score = score - 10
+                            set_canary_sad()
+                            sounds.bing.play()
+                            place_evilcanary()
+
+                        if canary_counter == 300:
+                            place_evilcanary()
+                            canary_counter = 0
+
+                        def set_canary_happy():
+                            canary.image = "happycanary"
+                            clock.schedule_unique(set_canary_normal, 1.0)
+
+                        def set_canary_sad():
+                            canary.image = "sadcanary"
+                            clock.schedule_unique(set_canary_normal, 1.0)
+
+                        def set_canary_normal():
+                            canary.image = "canary"
+
+                        clock.schedule(time_up, 60.0)
+                        place_worm()
+                        place_evilcanary()
+                </pre>
             <h3 id="pythongamecoin">Python Game: Coin Game</h3>
             <h3 id="coingamecode">Coin Game Code</h3>
     </body
