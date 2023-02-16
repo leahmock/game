@@ -79,3 +79,13 @@ body {
   #explorationContent {
     magin: 35px ;
   } 
+
+/* code styling */
+  #clickgamecode {
+    color: rgb(0, 106, 245) /* medium blue color */;
+  }
+  
+  #coingamecode {
+    color: rgb(0, 106, 245) /* medium blue color */;
+  }
+    
