@@ -58,7 +58,8 @@
                     when it had been clicked. Then, Ifollowed the tutorial to create the click game using python in Mu. After I followed the tutorial,
                     I made a few modifications to the code, such as adding code that changed the speed of the character when it was clicked. I used the
                     random functionality of python to do this. Before creating the click game, I had not previously used python to create anything, 
-                    so I first learned the basics of python while doing this assignment. 
+                    so I first learned the basics of python while doing this assignment. I also learned how to read and understand the feedback given
+                    by the Check function in Mu, which allowed me to understand errors in the code I had written.
                 </p>
             <h3 id="clickgamecode" class="code">Click Game Code</h3>
                 <pre>
@@ -107,6 +108,24 @@
                             cat.image = "character"
                 </pre>
             <h3 id="pythongamecoin">Python Game: Coin Game</h3>
+                <p>
+                    To create the coin game, I followed another tutorial that had the foundational code for the game. The original code consisted of
+                    two actors (a fox and a coin, which I later modifed. The code also made the fox move in a smooth path when the user clicked the 
+                    arrow keys. It also made the coin to move to a random place when it was touched by the fox, which increased the user's score.
+                    After I had written the code from the tutorial in Mu, I modified the code by adding my own icons made in Piskel. I originally 
+                    chose to draw a red canary and a worm, which replaced the fox and the coin. I then decided to add another actor to act as an 
+                    obstacle for the player. To do this, I drew another canary in Piskel, and I added code that lowered the user's score when they
+                    collided with the other canary. The second canary moved in a random fashion, similar to the coin, which increased the level of 
+                    difficulty for the player. Finally, I added sound to the game, a positive ding when the canary touches the worm and a negative ding 
+                    when the two canaries collide, and I created two more drawings in Piskel, one of a happy red canary and one of a sad red canary. 
+                    The red canary's image was set to the happy canary when it touched the worm and the sad canary when it touched the other canary.
+                    While creating this game, I learned how to revise my code to make the player's experience better (for example, adding sounds and 
+                    changing the 
+                </p>    
+            <h3 id="coingamedrawings">Coin Game Drawings</h3>
+                <img src="canary.png" alt="The player's canary." width=300>
+                <img src="evilcanary.png" alt="The evil canary." width=300>
+                <img src="worm.png" alt="The worm." width=300>
             <h3 id="coingamecode">Coin Game Code</h3>
                 <pre>
                     from random import randint
