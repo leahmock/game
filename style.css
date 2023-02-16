@@ -74,3 +74,8 @@ body {
   .choice {
     font-style: italic;
   }
+
+/* explorationContent styling for Exploration page */
+  #explorationContent {
+    magin: 35px ;
+  } 
